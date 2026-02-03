@@ -4,7 +4,7 @@
 // replace all vowels in the input string with "#"
 std::string replace_vowels(std::string str) {
   // find the position of the first vowel
-  size_t index_of_vowel = str.find_first_of("aeiou");
+  size_t index_of_vowel = str.find_first_of("aeiouAEIOU");
   // while a vowel was found
   while (index_of_vowel != std::string::npos) {  
     // Note: npos is provided by the string class and
