@@ -70,7 +70,7 @@ void D(bool cause_exception, const std::string& padding) {
   if (cause_exception) {
     std::cout << padding << "D is calling a function that throws an exception\n";
     std::string s = "hi";
-    s.at(3);
+    std::cout << s.at(3);
   } else {
     std::cout << padding << "D is doing nothing" << std::endl;
   }
