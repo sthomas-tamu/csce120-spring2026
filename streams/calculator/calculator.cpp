@@ -8,10 +8,12 @@ double calculate(std::string line) {
 
   std::istringstream iss(line);
   // TODO(@Student): extract <first_number> <op> <second_number> from iss
+  //                 any errors should throw an invalid_argument exception
 
   double result = 0;
   // TODO(@Student): compute result based on op symbol,
   //                 allowed symbols are +, -, *, /
+  //                 any errors should throw an invalid_argument exception
 
   return result;
 }
