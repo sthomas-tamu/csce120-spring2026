@@ -9,19 +9,19 @@ double calculate(std::string line) {
   std::istringstream iss(line);
   // TODO(@Student): extract <first_number> <op> <second_number> from iss
   //                 any errors should throw an invalid_argument exception
-  if(!(iss >> first_number)) {
+  if (!(iss >> first_number)) {
     std::ostringstream os;
     os << "Unable to parse first number in '" << line << "'";
     throw std::invalid_argument(os.str());
   }
 
-  if(!(iss >> op)) {
+  if (!(iss >> op)) {
     std::ostringstream os;
     os << "Unable to parse operator in '" << line << "'";
     throw std::invalid_argument(os.str());
   }
 
-  if(!(iss >> second_number)) {
+  if (!(iss >> second_number)) {
     std::ostringstream os;
     os << "Unable to parse second number in '" << line << "'";
     throw std::invalid_argument(os.str());
