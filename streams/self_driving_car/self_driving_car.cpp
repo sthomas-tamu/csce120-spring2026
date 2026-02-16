@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <sstream>
 #include <vector>
 #include <algorithm>
 
@@ -34,19 +33,13 @@ int main() {
 
     // Check if files opened successfully
     if (!lidar_file) {
-      std::ostringstream msg;
-      msg << "Error: Could not open lidar.txt";
-      throw std::runtime_error(msg.str());
+      throw std::runtime_error("Error: Could not open lidar.txt");
     }
     if (!camera_file) {
-      std::ostringstream msg;
-      msg << "Error: Could not open camera.txt";
-      throw std::runtime_error(msg.str());
+      throw std::runtime_error("Error: Could not open camera.txt");
     }
     if (!radar_file) {
-      std::ostringstream msg;
-      msg << "Error: Could not open radar.txt";
-      throw std::runtime_error(msg.str());
+      throw std::runtime_error("Error: Could not open radar.txt");
     }
 
     // Read from sensors until any file reaches end

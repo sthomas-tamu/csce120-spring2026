@@ -49,19 +49,13 @@ int main() {
 
     // Check if files opened successfully
     if (!lidar_file) {
-      std::ostringstream msg;
-      msg << "Error: Could not open lidar.txt";
-      throw std::runtime_error(msg.str());
+      throw std::runtime_error("Error: Could not open lidar.txt");
     }
     if (!camera_file) {
-      std::ostringstream msg;
-      msg << "Error: Could not open camera.txt";
-      throw std::runtime_error(msg.str());
+      throw std::runtime_error("Error: Could not open camera.txt");
     }
     if (!radar_file) {
-      std::ostringstream msg;
-      msg << "Error: Could not open radar.txt";
-      throw std::runtime_error(msg.str());
+      throw std::runtime_error("Error: Could not open radar.txt");
     }
 
     // Read from sensors until any file reaches end
@@ -72,7 +66,7 @@ int main() {
     double camera_center_dist = 0;
     double camera_left_dist = 0;
     double radar_dist = 0;
-    
+
     while ( (lidar_file >> lidar_dist) &&
             (camera_file >> camera_right_dist >> camera_center_dist >> camera_left_dist) &&
             (radar_file >> radar_dist) ) {
