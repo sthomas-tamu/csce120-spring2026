@@ -42,6 +42,9 @@ double calculate(std::string line) {
       result = first_number * second_number;
       break;
     case '/':
+      if (second_number == 0) {
+        throw std::invalid_argument("Cannot divide by 0");
+      }
       result = first_number / second_number;
       break;
     default:
