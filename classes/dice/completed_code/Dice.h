@@ -8,7 +8,7 @@ class Dice {
 
  public:
   // Constructor
-  Dice(unsigned int n) : sides_{n}, value_{0} {}
+  Dice(unsigned int n);
 
   // Getter methods
   unsigned int sides() const;
