@@ -10,6 +10,10 @@ class Date {
     : month_{m}, day_{d}, year_{y} {}
   ~Date() {}
 
+  unsigned int month() const { return month_; }
+  unsigned int day() const { return day_; }
+  unsigned int year() const { return year_; }
+
   void print() const;
 
   // TODO(@Student): add == and !=
