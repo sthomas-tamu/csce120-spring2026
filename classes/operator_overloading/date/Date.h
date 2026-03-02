@@ -1,0 +1,20 @@
+#ifndef DATE_H_
+#define DATE_H_
+
+class Date {
+ private:
+  unsigned int month_, day_, year_;
+
+ public:
+  Date(unsigned int m, unsigned int d, unsigned int y)
+    : month_{m}, day_{d}, year_{y} {}
+  ~Date() {}
+
+  void print() const;
+
+  // TODO(@Student): add == and !=
+
+  // TODO(@Student): add < and <=
+};
+
+#endif  // DATE_H_
