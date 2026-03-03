@@ -2,8 +2,8 @@
 #include "Dice.h"
 
 Dice::Dice(unsigned int n) : sides_{n} {
-  if (n == 0)  // invalid number of sides, changing to 1
-    n = 1;
+  if (sides_ == 0)  // invalid number of sides, changing to 1
+    sides_ = 1;
 
   roll();  // initial value_ is random roll
 }
