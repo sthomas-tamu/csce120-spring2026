@@ -1,16 +1,13 @@
 #include <iostream>
 
-int create_integer(int i) {
-  int* z = new int{i};
-  return *z;
-}
-
 int main() {
-  int w = create_integer(12);
+  int w = new int{12};
   std::cout << w << std::endl;
 
-  w = create_integer(3);
+  w = new int{3};
   std::cout << w << std::endl;
+
+  delete w;
 
   return 0;
 }
