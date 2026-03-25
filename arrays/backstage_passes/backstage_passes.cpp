@@ -55,6 +55,7 @@ bool add_fan(Fan* list, size_t capacity, const Fan& fan_to_add) {
   // TODO(@Student): add the new fan in the first unoccupied place,
   //                 only add if there is enough room for them and their guests,
   //                 if unsuccessful, return false
+  return false;
 }
 
 
