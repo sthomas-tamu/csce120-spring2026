@@ -5,7 +5,7 @@
 List::List(size_t count, int value, size_t reserve) {
   size_ = count;
   capacity_ = count + reserve;
-  array_ = new int[count];
+  array_ = new int[capacity_];
   for (size_t i = 0; i < size_; ++i)
     array_[i] = value;
 }
