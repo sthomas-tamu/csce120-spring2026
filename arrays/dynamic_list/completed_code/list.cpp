@@ -73,10 +73,9 @@ void List::resize(size_t new_capacity) {
   for (size_t i = 0; i < std::min(size_, new_capacity); ++i)
     new_array[i] = array_[i];
 
-  // update pointer and release old memeory
-  int* old_array = array_;
+  // release old memory and update to new array
+  delete[] array_;
   array_ = new_array;
-  delete[] old_array;
 
   // update capacity
   capacity_ = new_capacity;
