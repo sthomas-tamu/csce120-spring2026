@@ -5,7 +5,7 @@
 #include <string>
 
 class SocialMediaPost {
-  std::string text_;       // content of the post
+  std::string text_;        // content of the post
   unsigned int num_likes_;  // number of likes
   int* liked_by_;           // ids of those who liked the post
 
