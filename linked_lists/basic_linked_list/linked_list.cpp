@@ -11,6 +11,9 @@ LinkedList::LinkedList(const LinkedList& other)
 
 
 LinkedList& LinkedList::operator=(const LinkedList& other) {
+  if (this == &other)
+    return *this;
+
   clear();
   Node* cur = other.head_;
   while (cur != nullptr) {
