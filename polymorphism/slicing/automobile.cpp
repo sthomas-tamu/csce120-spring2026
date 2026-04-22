@@ -7,15 +7,15 @@ class Automobile {
   std::string make_;
 
  protected:
-  double fuel_capacity_g;
+  double fuel_capacity_;
 
  public:
   Automobile(int y, std::string s, double f)
-    : model_year_(y), make_(s), fuel_capacity_g(f) {}
+    : model_year_(y), make_(s), fuel_capacity_(f) {}
 
   virtual double get_range() const {
     // compute from gas
-    return fuel_capacity_g;
+    return fuel_capacity_;
   }
 };
 
@@ -29,18 +29,18 @@ class Hybrid : public Automobile {
 
   double get_range() const override {
     // compute from battery and gas
-    return fuel_capacity_g + battery_capacity_;
+    return fuel_capacity_ + battery_capacity_;
   }
 };
 
 int main() {
   Hybrid prius(2024, "Prius", 11.3, 13.6);
-  Automobile a = prius;
-  Automobile& b = prius;
-  Automobile* c = &prius;
+  Automobile automobile = prius;
+  Automobile& automobile_reference = prius;
+  Automobile* automobile_pointer = &prius;
 
   // TODO(@Student): experiment with what get_range() outputs
-  //                 for different data types:
+  //                 for different ways objects are created
   //                 Hybrid, Automobile, Automobile&, Automobile*
 
   return 0;
